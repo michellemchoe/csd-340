@@ -2,6 +2,6 @@
 
 ## Contributors
 
-..* John Woods
-..* Michelle Choe
+* John Woods
+* Michelle Choe
 
