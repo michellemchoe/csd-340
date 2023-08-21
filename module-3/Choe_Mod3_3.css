@@ -1,0 +1,58 @@
+h1 {
+    text-align: center;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+li {
+    font-weight: 300;
+}
+
+ol li {
+    padding: 10px;
+    list-style-position: outside;
+}
+
+ul li {
+    padding: 10px;
+    list-style-type: upper-roman;
+    list-style-position: outside;
+}
+
+.column-left {
+    float: left;
+    width: 45%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    border-radius: 15px;
+}
+
+.column-right {
+    float: right;
+    width: 45%;
+    border-style: dashed;    
+    border-width: 1px;
+    border-color: red;
+    border-radius: 15px;
+}
+
+.last-div-wrapper {
+    width: 100%;
+    margin-top: 60%;
+    margin-bottom: 20px;
+}
+
+.last-div {
+    float: right;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
