@@ -2,6 +2,16 @@ h1, h3 {
     text-align: center;
 }
 
+.image-gallery {
+    margin-top: 10%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+
 figure {
     text-align: center;
 }
@@ -10,16 +20,24 @@ figcaption {
     font-style: italic;
     font-size: .75em;
 }
-.image-gallery {
-    margin-top: 10%;
-}
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-}
 
-.grid-item {
+.grid-item img{
     object-fit: cover;
-    max-height: 800px;
+    max-height: 500px;
 }
 
+.last-div-wrapper {
+    text-align: center;
+}
+
+.last-div {
+    float: right;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    font-style: italic;
+}
