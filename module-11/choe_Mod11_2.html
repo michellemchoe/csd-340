@@ -8,6 +8,7 @@
     <meta http-equiv="author" content="Michelle Choe" />
     <script>
         const tasks = [];
+
         function addToList() {
             const newTask = document.getElementById("new-task").value;
             // all new tasks must have some alphabetic value to be added.
@@ -27,11 +28,15 @@
                 clearDisplay();
             }
         }
+
         function removeLastTask() {
+            // check if list is empty
             if (tasks.length == 0){
                 alert("There are no tasks in your to do list");
                 return;
             }
+
+            // find index value of last task and remove it
             const lastIndex = tasks.length - 1;
             const lastTask = tasks.pop();
             alert(lastTask + " has been removed from your list\nThere are " + tasks.length + " tasks remaining on your to do list");
@@ -42,8 +47,8 @@
             }
         }
 
-
         function displayList() {
+            // check if list is empty
             if (tasks.length == 0){
                 alert("There are no tasks in your to do list");
                 return;
@@ -63,7 +68,9 @@
             // add html to page
             document.getElementById("list-display-area").innerHTML=listDisplay;
         }
+
         function clearDisplay() {
+            // clear display area
             document.getElementById("list-display-area").innerHTML = "";
         }
        
@@ -91,6 +98,7 @@
         </div>
 
     </div>
+    
     <footer>
         <br/><br/>
         <a href="../index.html" style="float:right">CSD 340 Landing Page</a>
