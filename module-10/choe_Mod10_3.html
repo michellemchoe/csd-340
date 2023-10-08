@@ -1,0 +1,52 @@
+<!-- Michelle Choe : Assignment 10.3 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Development with HTML and CSS</title>
+    <meta name="description" content="JavaScript Exercise, Part 2" />
+    <meta http-equiv="author" content="Michelle Choe" />
+    <script>
+        function changeImage(imageFile) {
+            var clickedImage = document.getElementById("mainImage");
+            var newImage = document.createElement("img");
+            newImage.id="mainImage";
+            newImage.src=imageFile;
+            newImage.alt="large image";
+            newImage.className = mainImage;
+            newImage.style.width = "300px";
+            newImage.style.height = "200px";
+            clickedImage.nextElementSibling.innerHTML="Click on the image to put its coat back on."
+
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="body1.css" />
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 10.3: JavaScript - Part 2</h1>
+        <div>
+            <a href=# onclick="seedling.src='./images/seedling_2.jpg';">
+                <img name="seedling" src="./images/seedling_1.jpg" style= "width:300px; height:200px" 
+                    alt="Seedling with seed coat">
+            </a>    
+                <div id="seedling-caption">
+                Click on the seedling to help it grow.
+            </div>
+        </div>
+        <div>
+            <a href=# onclick="flower.src='./images/flower_1.jpg';">
+                <img name="flower" src="./images/flower_3.jpg" style= "width:300px; height:200px" 
+                    alt="rose bud">
+            </a>    
+                <div id="flower-caption">
+                Click on the flower to make it bloom.
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="../index.html" style="float:right">CSD 340 Landing Page</a>
+    </footer>
+</body>
+
+</html>
