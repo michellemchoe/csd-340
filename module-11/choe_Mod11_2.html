@@ -1,0 +1,100 @@
+<!-- Michelle Choe : Assignment 11.2 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Development with HTML and CSS</title>
+    <meta name="description" content="JavaScript Exercise, Part 3" />
+    <meta http-equiv="author" content="Michelle Choe" />
+    <script>
+        const tasks = [];
+        function addToList() {
+            const newTask = document.getElementById("new-task").value;
+            // all new tasks must have some alphabetic value to be added.
+            if (!/^[a-zA-Z0-9]+$/.test(newTask)) {
+                alert("Empty tasks cannot be added to the list.");
+                return;
+            }
+            // add new task to list
+            tasks.push(newTask);
+            alert(newTask + " is now item number " + tasks.length + " on your to do list");
+            
+            // reset text field
+            document.getElementById("new-task").value="";
+
+            // if a list is being displayed, clear the display area
+            if (document.getElementById("list-display-area").value != "") {
+                clearDisplay();
+            }
+        }
+        function removeLastTask() {
+            if (tasks.length == 0){
+                alert("There are no tasks in your to do list");
+                return;
+            }
+            const lastIndex = tasks.length - 1;
+            const lastTask = tasks.pop();
+            alert(lastTask + " has been removed from your list\nThere are " + tasks.length + " tasks remaining on your to do list");
+           
+            // if a list is being displayed, clear the display area
+            if (document.getElementById("list-display-area").value != "") {
+                clearDisplay();
+            }
+        }
+
+
+        function displayList() {
+            if (tasks.length == 0){
+                alert("There are no tasks in your to do list");
+                return;
+            }
+            
+            // start html with title and opening ordered list tag
+            let listDisplay = "<h2>Your To Do List</h3> <ol>";
+
+            // iterate through list and add html to listDisplay
+            for ( i = 0; i < tasks.length; i++) {
+                listDisplay += "<li>" + tasks[i] + "</li>";
+            }
+
+            // finish html with closing ordered list tag
+            listDisplay += "</ol>";
+
+            // add html to page
+            document.getElementById("list-display-area").innerHTML=listDisplay;
+        }
+        function clearDisplay() {
+            document.getElementById("list-display-area").innerHTML = "";
+        }
+       
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 11.2: JavaScript - Part 3</h1>
+        <p>This is an interactive To Do List.</p>
+        <p>Type in your first item in the text book. Then click Add.</p>
+        <p>Click the Display button to see current items in the list.</p>
+        <p>Click Delete Last Entry if you'd like to remove the last entry.</p>
+        <br/>
+        <div>
+            <input id="new-task" type="text" placeholder="Enter task">
+            <button type="button" onclick="addToList()">Add</button>
+            <button type="button" onclick="removeLastTask()">Delete Last Entry</button>
+            <button type="button" onclick="displayList()">Display</button>
+            <button type="button" onclick="clearDisplay()">Clear Display Area</button>
+        </div>
+
+        <div>
+            <span id="list-display-area"></span>
+        </div>
+
+    </div>
+    <footer>
+        <br/><br/>
+        <a href="../index.html" style="float:right">CSD 340 Landing Page</a>
+    </footer>
+</body>
+
+</html>
