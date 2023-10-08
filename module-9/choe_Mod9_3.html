@@ -1,0 +1,47 @@
+<!-- Michelle Choe : Assignment 9.3 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="./choe_Mod9_3.css" type="text/css" rel="stylesheet" />
+    <title>CSD 340 Development with HTML and CSS</title>
+    <meta name="description" content="Building a Web Page Exercise, Part 2" />
+    <meta http-equiv="author" content="Michelle Choe" />
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+        <h2>Sonnet #18 by William Shakespeare</h2>
+
+        <p>Shall I compare thee to a summer's day?</p>
+        <p>Thou art more <span id="lovely">______</span> and more <span id="temperate">_________</span>:</p>
+        <p>Rough winds do shake the darling buds of May,</p>
+        <p>And summer’s lease hath all too short a date;</p>
+        <br />
+        <p>And summer’s lease hath all too short a date; </p>
+        <p>Sometime too hot the eye of <span id="heaven">______</span> shines,</p>
+        <p>And often is his gold complexion dimm'd;</p>
+        <p>And every fair from fair sometime declines,</p>
+        <p>By chance or nature’s changing course untrimm'd;</p>
+        <br />
+        <p>But thy eternal summer shall not fade,</p>
+        <p>Nor lose possession of that fair thou ow’st;</p>
+        <p>Nor shall death brag thou wander’st in his shade,</p>
+        <p>When in eternal lines to time thou grow’st:</p>
+        <br />
+        <p>So long as men can <span id="breathe">_______</span> or eyes can see,</p>
+        <p>So long lives this, and this gives life to thee.</p>
+
+        <div id="button-wrapper">
+            <button type="button" onclick='document.getElementById("lovely").innerHTML = "lovely"'>lovely</button>
+            <button type="button" onclick='document.getElementById("temperate").innerHTML = "temperate"'>temperate</button>
+            <button type="button" onclick='document.getElementById("heaven").innerHTML = "heaven"'>heaven</button>
+            <button type="button" onclick='document.getElementById("breathe").innerHTML = "breathe"'>breathe</button>
+        </div>
+    </div>
+    <footer>
+        <a href="../index.html" style="float:right">CSD 340 Landing Page</a>
+    </footer>
+</body>
+
+</html>
