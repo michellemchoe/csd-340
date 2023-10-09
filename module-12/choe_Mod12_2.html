@@ -1,0 +1,94 @@
+<!-- Michelle Choe : Assignment 12.2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="./choe_Mod12_2.css" type="text/css" rel="stylesheet" />
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="description" content="CSD 340 Module 12.2" />
+    <meta http-equiv="author" content="Michelle Choe" />
+    <script>
+        // create and instantiate 
+        const books = ["To Kill a Mocking Bird by Harper Lee",
+            "1984 by George Orwell", 
+           "The Lord of the Rings by J.R.R. Tolkein", 
+           "The Catcher and the Rye by J.D. Salinger",
+            "The Great Gatsby by F. Scott Fitzgerald", 
+            "The Lion, the Witch, and the Wardrobe by C.S. Lewis",
+            "Lord of the Flies by William Golding",
+            "The Animal Farm by George Orwell",
+            "Catch-22 by Joseph Heller",
+            "The Grapes of Wrath by John Steinbeck"];
+
+        function displayBooks(bookList, sort){
+            orderedBooks = "</ol>";
+
+            // create string to hold html
+            var orderedBooks = "<div style>" + sort + " order</div> <ol>";
+
+            for (i=0; i<bookList.length; i++) {
+                orderedBooks += "<li>" + bookList[i] + "</li>";
+            }
+
+            orderedBooks += "</ol>";
+
+            // add html to page
+            document.getElementById("display-area").innerHTML=orderedBooks;
+        }
+
+        function topToBottom(){
+            // create array to hold books in descending order
+            const descBooks=[];
+            for (i=0; i < books.length; i++) {
+                descBooks.push(books[i]);
+            }
+
+            // send descending list to be displayed
+            displayBooks(descBooks, "descending");
+       }
+    
+        function bottomToTop(){
+            // create array to hold books in ascending order
+            const ascBooks=[];
+            for (i=books.length -1; i >= 0; i--) {
+                ascBooks.push(books[i]);
+            }
+
+            // send descending list to be displayed
+            displayBooks(ascBooks, "ascending");
+       }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: Build a Web Page Exercise - Part 4</h1>
+        <div class="column-left">
+            <div class="column-wrapper">
+                <h3>Top 10 Favorite Books</h3>
+                <div>Display my favorite books in either ascending or descending order:</div>
+                <button type="button" onclick="topToBottom()">Top to Bottom</button>
+                <button type="button" onclick="bottomToTop()">Bottom to Top</button>
+                <hr>
+                <span id="display-area"></span>
+            </div>
+        </div>
+        <div class="column-right">
+            <div class="column-wrapper">
+                <h3>5 Things I've Learned Since the Course Started</h3>
+                <ul>
+                    <li>CSS is used to add style to webpages.</li>
+                    <li>CSS files must be linked to HTML files to apply styles.</li>
+                    <li>'.' is used to indicate classes in CSS files.</li>
+                    <li>'#' is used to indicate id's in CSS files.</li>
+                    <li>CSS for links have to be in a certain order.</li>
+                </ul>
+            </div>
+        </div>
+        <br />
+        <footer>
+            <a href="../index.html" style="float:right" id="portal">CSD 340 Landing Page</a>
+        </footer>
+    </div>
+</body>
+
+</html>
