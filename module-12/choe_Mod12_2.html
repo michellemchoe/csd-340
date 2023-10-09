@@ -23,7 +23,7 @@
             orderedBooks = "</ol>";
 
             // create string to hold html
-            var orderedBooks = "<div style>" + sort + " order</div> <ol>";
+            var orderedBooks = "<div style=\"font-weight:bold">" + sort + " Order</div> <ol>";
 
             for (i=0; i<bookList.length; i++) {
                 orderedBooks += "<li>" + bookList[i] + "</li>";
@@ -43,7 +43,7 @@
             }
 
             // send descending list to be displayed
-            displayBooks(descBooks, "descending");
+            displayBooks(descBooks, "Descending");
        }
     
         function bottomToTop(){
@@ -54,7 +54,7 @@
             }
 
             // send descending list to be displayed
-            displayBooks(ascBooks, "ascending");
+            displayBooks(ascBooks, "Ascending");
        }
     </script>
 </head>
